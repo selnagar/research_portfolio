@@ -1,4 +1,3 @@
-/* Research results supplied by the author. No participant data are inferred. */
 window.PORTFOLIO_RESULTS = {
   "bootstrapResamples": 5000,
   "accuracyRegression": { "slope": -0.034, "p": 0.001, "rSquared": 0.082 },
