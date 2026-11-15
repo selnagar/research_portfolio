@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive research portfolio exploring information sequence, category learning, and generalisation.">
+  <title>Learning, in sequence — Research portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="text-content.js" defer></script>
+  <script src="experiment-data.js" defer></script>
+  <script src="text-editor.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="results-data.js" defer></script>
+  <script src="results.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content"><span data-copy="page.1">Skip to content</span></a>
+  <div class="desktop-bar"><div class="wrap"><span><span data-copy="page.2">✦ COGNITIVE SCIENCE / HUMAN LEARNING</span></span><span><span data-copy="page.3">PERSONAL RESEARCH PORTFOLIO</span></span></div></div>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#"><span class="brand-icon" aria-hidden="true">✳</span> <span data-copy="header.1">Learning, in sequence</span><span class="brand-dot" aria-hidden="true">✦</span></a>
+    <nav aria-label="Main navigation"><a href="#experiment"><span data-copy="header.2">Experiment</span></a><a href="#models"><span data-copy="header.3">Models</span></a><a href="#findings"><span data-copy="header.4">Findings</span></a><a href="#research"><span data-copy="header.5">Research ↗</span></a></nav>
+  </header>
+  <main id="main-content">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="window-title"><span><span aria-hidden="true">▧</span> <span data-copy="hero.1">learning_in_sequence.html</span></span><span class="window-decoration" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <div class="hero-body">
+        <div class="hero-copy">
+          <div class="eyebrow"><span data-copy="hero.2">COGNITIVE NEUROSCIENCE · RESEARCH PORTFOLIO</span></div>
+          <h1 id="hero-title"><span data-copy="hero-title.1">Same information.</span><br><span data-copy="hero-title.2">Different order.</span><br><em><span data-copy="hero-title.3">Different learning?</span></em></h1>
+          <p><span data-copy="hero.3">I study how the sequence of information shapes the categories we learn—and how we generalise to something new.</span></p>
+          <a class="button dark" href="#experiment"><span data-copy="hero.4">Explore the experiment</span> <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-art">
+          <img class="cats-illustration" src="assets/cats-training.svg" width="400" height="160" alt="Interleaving alternates black and gray icons; blocking groups three black icons followed by three gray icons.">
+        </div>
+      </div>
+      <div class="hero-meta"><span><span data-copy="hero.5">PhD in cognitive neuroscience</span></span><span><span data-copy="hero.6">Human learning / Computational modelling / Python</span></span></div>
+    </section>
+    <section class="question-band"><div class="wrap question-grid"><span class="eyebrow"><span data-copy="question.1">01 / THE QUESTION</span></span><h2><span data-copy="question.2">Learning is more than</span><br><span data-copy="question.3">what we see.</span></h2><p><span data-copy="question.4">Two learners can encounter the same examples in different orders. Does comparing categories side by side support learning differently from studying one category at a time? My research investigates this relationship between training regime, category learning, and generalisation.</span></p></div></section>
+    <section class="wrap section" id="experiment" aria-labelledby="experiment-title">
+      <div class="section-heading"><div><div class="eyebrow"><span data-copy="experiment.1">02 / EXPLORE THE TRAINING REGIMES</span></div><h2 id="experiment-title"><span data-copy="experiment-title.1">Two cats. Different tastes.</span></h2>
+        <p class="section-intro"><span data-copy="experiment.2">Which cat prefers which mix of fish and chicken? Learn the black and gray cats’ preferences, and explore how different training regimes change the experience.</span></p>
+      </div><span class="pill" id="data-badge"><span data-copy="data-badge.1">INTERACTIVE DEMO</span></span></div>
+
+      <p id="data-status" class="data-notice" role="status" hidden></p>
+
+      <div class="training-workspace">
+        <div class="regime-selector">
+          <h3><span data-copy="experiment.3">Choose a training regime</span></h3>
+          <div id="regime-controls" class="regime-controls" role="group" aria-label="Training regime">
+            <button type="button" data-regime="interleaved" aria-pressed="true"><span class="regime-number">01</span><span class="regime-label"><span data-copy="regime.name.interleaved">Fully Interleaved</span></span><span class="regime-icon" aria-hidden="true">↔</span></button>
+            <button type="button" data-regime="mixed" aria-pressed="false"><span class="regime-number">02</span><span class="regime-label"><span data-copy="regime.name.mixed">Partially Interleaved</span></span><span class="regime-icon" aria-hidden="true">⋯</span></button>
+            <button type="button" data-regime="category" aria-pressed="false"><span class="regime-number">03</span><span class="regime-label"><span data-copy="regime.name.category">Partially Blocked</span></span><span class="regime-icon" aria-hidden="true">▥</span></button>
+            <button type="button" data-regime="configuration" aria-pressed="false"><span class="regime-number">04</span><span class="regime-label"><span data-copy="regime.name.configuration">Fully Blocked</span></span><span class="regime-icon" aria-hidden="true">▰</span></button>
+          </div>
+          <p id="regime-description" class="regime-description"></p>
+        </div>
+
+        <div class="experiment-panel">
+          <div class="window-title"><span><span aria-hidden="true">▧</span> <span data-copy="experiment.4">category_learning.exe</span></span><span class="window-decoration" aria-hidden="true"><i></i><i></i><i></i></span></div>
+          <div class="experiment-content">
+            <p class="task-instruction"><span data-copy="experiment.5">Which cat prefers this mix?</span></p>
+            <div class="stimulus-stage" id="stimulus-stage">
+              <div class="meal-display">
+                <div class="food-cue fish-cue"><img src="assets/fish.svg" width="160" height="160" alt="A simple green fish icon"><span><span data-copy="stimulus-stage.1">Fish</span></span></div>
+                <div id="stimulus" class="presentation-pie" role="img" aria-label="Preparing food proportions"></div>
+                <div class="food-cue chicken-cue"><img src="assets/chicken-thigh.svg" width="160" height="160" alt="A simple golden chicken thigh icon"><span><span data-copy="stimulus-stage.2">Chicken</span></span></div>
+              </div>
+            </div>
+            <div class="response-buttons" id="response-buttons" role="group" aria-label="Which cat prefers this mix?">
+              <button type="button" data-answer="1" disabled><span class="cat-face black-cat" aria-hidden="true"></span><span data-copy="cat.1">Black cat</span></button>
+              <button type="button" data-answer="2" disabled><span class="cat-face gray-cat" aria-hidden="true"></span><span data-copy="cat.2">Gray cat</span></button>
+            </div>
+            <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+            <p id="task-status" class="task-completion" role="status"></p>
+            <div class="task-controls" role="group" aria-label="Navigate the training regime">
+              <button type="button" id="previous" class="transport-button" aria-label="Previous presentation" disabled><span data-copy="previous.1">◀ Back</span></button>
+              <button type="button" id="restart" class="text-button" disabled><span data-copy="restart.1">↺ Reset</span></button>
+              <button type="button" id="next" class="button dark" disabled>Next example →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="regime-preview">
+        <div class="regime-heading"><h3><span data-copy="experiment.6">Training regime</span></h3><span id="regime-summary">16 presentations</span></div>
+        <ol id="regime-visualisation" class="regime-timeline" aria-label="Training regime presentations"></ol>
+        <p class="coordinate-key"><span data-copy="experiment.7">Pie labels show chicken level . fish level (1–6).</span></p>
+      </div>
+
+      <details class="regime-explanation">
+        <summary><span data-copy="experiment.8">About the stimuli and training regimes</span></summary>
+        <p><span data-copy="experiment.9">Chicken fills the right half in magenta; fish fills the left half in green. Each half has six levels, from 30° to 180°. The black cat is Cat 1 (central band); the gray cat is Cat 2 (periphery).</span></p>
+        <p><span data-copy="experiment.10">The category map and old/new assignments follow the supplied reference image. The fully interleaved regime samples eight old configurations per cat. The other regimes use three or two of those configurations with the specified repetitions. The blocked regimes share a pair. Orders stay fixed when you change regime or reset.</span></p>
+        <p><span data-copy="experiment.11">This is an explanatory cover story. Responses stay in this tab and are cleared by Reset or a regime change; they are not research findings.</span></p>
+        <div class="feature-panel">
+          <div class="card-bar"><span><span data-copy="experiment.12">STIMULUS_SPACE / 6 × 6</span></span><span aria-hidden="true">▦</span></div>
+          <div class="feature-content">
+            <div class="category-legend"><span><i class="legend-cat1" aria-hidden="true"></i><span data-copy="experiment.13">Cat 1 (central band)</span></span><span><i class="legend-cat2" aria-hidden="true"></i><span data-copy="experiment.14">Cat 2 (periphery)</span></span></div>
+            <div class="feature-axes">
+              <div class="vertical-axis"><span data-copy="experiment.15">Fish (Feature 2) →</span></div>
+              <div class="space-with-ticks"><div class="space-row"><div id="row-ticks" class="row-ticks" aria-hidden="true"></div><div id="stimulus-grid" class="stimulus-grid" role="group" aria-label="Food-proportion space: six rows by six columns" aria-describedby="space-help"></div></div><div id="column-ticks" class="column-ticks" aria-hidden="true"></div><div class="horizontal-axis"><span data-copy="experiment.16">Chicken (Feature 1) →</span></div></div>
+            </div>
+            <p class="small muted" id="space-help"><span data-copy="space-help.1">Hover, focus, or tap a pie to inspect its food proportions without moving the task.</span></p>
+            <div class="inspection" id="inspection" role="status" aria-live="polite"><div id="inspection-pie" class="inspection-pie" aria-hidden="true"></div><p id="inspection-text">Select a mix to inspect its proportions.</p></div>
+          </div>
+        </div>
+      </details>
+      <noscript><p class="data-notice">Enable JavaScript to explore the training regimes and cats’ preferences.</p></noscript>
+    </section>
+    <section id="models" class="models-section"><div class="wrap section"><div class="eyebrow"><span data-copy="models.1">03 / EXPLAINING THE PROCESS</span></div><h2><span data-copy="models.2">What kind of learner</span><br><span data-copy="models.3">explains the behaviour?</span></h2><p class="section-intro"><span data-copy="models.4">My research compares iGMM and working-memory models as accounts of category learning. The sketches below introduce the ideas; precise mechanisms depend on the implementations used in the study.</span></p><div class="model-grid"><article><div class="card-bar"><span><span data-copy="models.5">MODEL / 01</span></span><span aria-hidden="true">▧</span></div><img class="model-illustration" src="assets/RuL.png" width="1254" height="1254" loading="lazy" decoding="async" alt="Rule-learning model: learned category distributions over the two pie features, shown alongside examples and a new query mix."><span class="eyebrow"><span data-copy="models.6">CLUSTER-BASED ACCOUNT</span></span><h3><span data-copy="models.7">iGMM</span></h3><p><span data-copy="models.8">An infinite Gaussian mixture model represents observations using a flexible set of clusters. This offers a way to ask how learners organise examples into latent groups.</span></p><p class="model-question"><span data-copy="models.9">Research lens</span> <span class="model-question-text"><span data-copy="models.10">How might the order of examples shape learned category structure?</span></span></p></article><article><div class="card-bar"><span><span data-copy="models.11">MODEL / 02</span></span><span aria-hidden="true">▧</span></div><img class="model-illustration" src="assets/WM.png" width="1254" height="1254" loading="lazy" decoding="async" alt="Working-memory model: a new query mix is compared with individual remembered examples across the two pie features."><span class="eyebrow"><span data-copy="models.12">MEMORY-BASED ACCOUNT</span></span><h3><span data-copy="models.13">Working-memory models</span></h3><p><span data-copy="models.14">Working-memory accounts focus on information available over a limited span. They offer a way to examine how access to recent examples could influence category decisions.</span></p><p class="model-question"><span data-copy="models.15">Research lens</span> <span class="model-question-text"><span data-copy="models.16">Could the availability of recent examples explain sequence effects?</span></span></p></article></div><p class="small muted"><span data-copy="models.17">Conceptual descriptions only. No model is fitted or simulated on this page.</span></p></div></section>
+    <section id="findings" class="wrap section"><div class="eyebrow"><span data-copy="findings.1">04 / EMPIRICAL EVIDENCE</span></div><h2><span data-copy="findings.2">From behaviour to explanation.</span></h2><div class="findings-grid"><article class="placeholder empirical-findings">
+        <div class="card-bar"><span><span data-copy="findings.3">EMPIRICAL_FINDINGS</span></span><select id="accuracy-regime" class="results-selector" aria-label="Training regime for empirical findings"></select></div>
+        <h3><span data-copy="findings.4">Empirical findings</span></h3>
+        <figure class="results-figure">
+          <div class="results-frame accuracy-frame">
+            <div class="results-widget accuracy-widget">
+              <svg id="accuracy-plot" class="results-plot" role="img" aria-label="Mean test accuracy for the four ordered training regimes"></svg>
+              <div class="accuracy-readout"><span data-copy="results.accuracy.mean">Mean test accuracy:</span> <strong id="accuracy-value">81.9%</strong></div>
+              <div id="accuracy-interpretation" class="results-interpretation"></div>
+              <div id="accuracy-regression" class="results-method"></div>
+              <div class="results-method"><span data-copy="results.accuracy.order">Left → right: less interleaving, more blocking.</span></div>
+            </div>
+          </div>
+          <figcaption id="test-accuracy-caption"><span data-copy="test-accuracy-caption.1">Test accuracy was higher in the more interleaved training regimes.</span></figcaption>
+        </figure>
+        <div class="figure-downloads"><a href="assets/test-accuracy.svg" download><span data-copy="findings.5">Download SVG ↗</span></a><a href="assets/test-accuracy.png" download><span data-copy="findings.6">Download PNG ↗</span></a></div>
+      </article><article class="placeholder model-evaluations">
+        <div class="card-bar"><span><span data-copy="findings.7">MODEL_EVALUATIONS</span></span><select id="bic-regime" class="results-selector" aria-label="Training regime for model evaluations"></select></div>
+        <h3><span data-copy="findings.8">Model evaluations</span></h3>
+        <figure class="results-figure">
+          <div class="results-frame bic-frame">
+            <div class="results-widget bic-widget">
+              <svg id="bic-plot" class="results-plot" role="img" aria-label="Group-level BIC difference, best Working Memory minus best Rule Learning"></svg>
+              <div class="bic-statistics"><span><span data-copy="results.bic.mean">Mean ΔBIC</span><strong id="bic-mean">62.71</strong></span><span><span data-copy="results.bic.ci">95% CI</span><strong id="bic-ci">[44.98, 80.44]</strong></span></div>
+              <div id="bic-interpretation" class="results-interpretation"></div>
+              <div id="bic-method" class="results-method"></div>
+            </div>
+          </div>
+          <figcaption id="model-bic-caption"><span data-copy="model-bic-caption.1">A group-level comparison of the best-fitting WM and RuL model families; these are not individual participant classifications.</span></figcaption>
+        </figure>
+        <div class="figure-downloads"><a href="assets/model-bic.svg" download><span data-copy="findings.9">Download SVG ↗</span></a><a href="assets/model-bic.png" download><span data-copy="findings.10">Download PNG ↗</span></a></div>
+      </article></div></section>
+    <section id="research" class="research-section"><div class="wrap section"><div class="eyebrow"><span data-copy="research.1">05 / EXPLORE THE RESEARCH</span></div><h2><span data-copy="research.2">Curiosity, with code.</span></h2><p><span data-copy="research.3">I’m a cognitive neuroscience PhD graduate with strong Python experience, bringing questions about human learning to a Behavioral Research Scientist role.</span></p><p><span data-copy="research.project-context">This project formed part of my PhD research at [institute], in collaboration with [project team].</span></p><div class="research-links"><a class="resource-link" href="https://github.com/sfrancesco21/rule-learning" target="_blank" rel="noopener noreferrer"><span data-copy="research.4">GitHub</span> <span class="resource-arrow" aria-hidden="true">↗</span><small><span data-copy="research.5">Explore the research code and analyses.</span></small></a><div class="resource-link manuscript-resource"><span data-copy="research.6">Research manuscript</span><small><span data-copy="research.7">In preparation</span></small></div></div><p id="manuscript-note" class="small"><span data-copy="manuscript-note.1">The research manuscript is in preparation.</span></p></div></section>
+  </main><footer class="wrap"><span><span data-copy="footer.1">Learning, in sequence.</span></span><span><span data-copy="footer.2">Hand-coded with curiosity · HTML / CSS / JS</span></span><a href="#"><span data-copy="footer.3">Back to top ↑</span></a></footer>
+</body>
+</html>

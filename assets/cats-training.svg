@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" fill="none">
+  <defs>
+    <linearGradient id="black" x1="0" y1="0" x2=".34" y2="1">
+      <stop stop-color="#22222b"/><stop offset=".38" stop-color="#16161e"/><stop offset=".49" stop-color="#07070b"/><stop offset=".56" stop-color="#35353e"/><stop offset="1" stop-color="#14141c"/>
+    </linearGradient>
+    <linearGradient id="slate" x1="0" y1="0" x2=".34" y2="1">
+      <stop stop-color="#b9c3d0"/><stop offset=".38" stop-color="#7f8da0"/><stop offset=".49" stop-color="#4c5b70"/><stop offset=".56" stop-color="#9aa8ba"/><stop offset="1" stop-color="#64748b"/>
+    </linearGradient>
+    <path id="cat" d="M0 0 27 15H73L100 0 95 70 80 94 50 100 20 94 5 70Z"/>
+    <g id="eyes"><rect x="25" y="48" width="10" height="14" rx="5"/><rect x="67" y="48" width="10" height="14" rx="5"/></g>
+    <g id="black-cat"><use href="#cat" fill="url(#black)"/><use href="#eyes" fill="#fff"/></g>
+    <g id="gray-cat"><use href="#cat" fill="url(#slate)"/><use href="#eyes" fill="#d9e6bb"/></g>
+  </defs>
+  <path d="M12 81H388" stroke="#ded8ed"/>
+  <g fill="#57536e" font-family="Courier New, monospace" font-size="10" letter-spacing=".4"><text x="12" y="51">INTERLEAVING</text><text x="12" y="123">BLOCKING</text></g>
+  <!-- Only the order patterns remain; no large portraits or cat-name labels. -->
+  <use href="#black-cat" transform="translate(151 31) scale(.26)"/><use href="#gray-cat" transform="translate(192 31) scale(.26)"/>
+  <use href="#black-cat" transform="translate(233 31) scale(.26)"/><use href="#gray-cat" transform="translate(274 31) scale(.26)"/>
+  <use href="#black-cat" transform="translate(315 31) scale(.26)"/><use href="#gray-cat" transform="translate(356 31) scale(.26)"/>
+  <use href="#black-cat" transform="translate(151 103) scale(.26)"/><use href="#black-cat" transform="translate(192 103) scale(.26)"/>
+  <use href="#black-cat" transform="translate(233 103) scale(.26)"/><use href="#gray-cat" transform="translate(274 103) scale(.26)"/>
+  <use href="#gray-cat" transform="translate(315 103) scale(.26)"/><use href="#gray-cat" transform="translate(356 103) scale(.26)"/>
+</svg>

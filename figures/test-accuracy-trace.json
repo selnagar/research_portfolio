@@ -1,0 +1,35 @@
+{
+  "provenance": "Manual visual trace of the test-accuracy image supplied by the user. These are approximate image coordinates, NOT participant-level data or exact published estimates.",
+  "limitations": "Only visibly distinguishable marker centres are traced. Overlapping markers cannot establish sample size. Bar heights and error extents are traced independently; no means, SDs, SEs, CIs, or statistical tests are calculated from these markers. The original error-bar definition is unknown.",
+  "axis_pixels": {"accuracy_zero_y": 788, "accuracy_one_y": 47},
+  "groups": [
+    {
+      "label": "Fully Interleaved",
+      "bar_top_y": 181,
+      "error_top_y": 163,
+      "error_bottom_y": 199,
+      "visible_marker_y": [65, 75, 85, 96, 103, 116, 127, 139, 150, 158, 240, 250, 260, 271, 307, 320, 343, 360, 386]
+    },
+    {
+      "label": "Partially Interleaved",
+      "bar_top_y": 225,
+      "error_top_y": 207,
+      "error_bottom_y": 244,
+      "visible_marker_y": [63, 88, 96, 112, 128, 151, 216, 233, 269, 278, 295, 316, 330, 339, 351, 372, 406]
+    },
+    {
+      "label": "Partially Blocked",
+      "bar_top_y": 230,
+      "error_top_y": 216,
+      "error_bottom_y": 245,
+      "visible_marker_y": [107, 127, 140, 149, 160, 169, 186, 198, 204, 226, 237, 262, 270, 287, 299, 308, 324, 335, 349, 368, 377]
+    },
+    {
+      "label": "Fully Blocked",
+      "bar_top_y": 263,
+      "error_top_y": 247,
+      "error_bottom_y": 281,
+      "visible_marker_y": [83, 103, 142, 156, 176, 202, 222, 244, 296, 320, 331, 353, 366, 375]
+    }
+  ]
+}

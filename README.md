@@ -1,0 +1,1 @@
+I built this responsive, Y2K-inspired website to showcase my PhD research on how training regime shapes learning and generalisation. Using plain HTML, CSS, and JavaScript, I created an interactive category-learning demo, explanations of rule-learning and working-memory models, and interactive visualisations of the behavioural and computational results.

@@ -1,0 +1,11 @@
+{
+  "provenance": "Manual visual trace of the BIC-difference figure supplied by the user. Approximate image coordinates, not raw model evaluations or exact published statistics.",
+  "limitations": "Bar tops and error endpoints are traced independently. Error-bar definition, sample sizes, and original model fits were not supplied. No statistical estimates or significance tests are computed. WM and RuL names and sign convention are retained from the image without equating RuL to another model family.",
+  "axis_pixels": {"zero_y": 650, "reference_y": 198, "reference_value": 80},
+  "groups": [
+    {"label": "Fully Interleaved", "bar_top_y": 295, "error_top_y": 190, "error_bottom_y": 396},
+    {"label": "Partially Interleaved", "bar_top_y": 534, "error_top_y": 443, "error_bottom_y": 625},
+    {"label": "Partially Blocked", "bar_top_y": 608, "error_top_y": 544, "error_bottom_y": 678},
+    {"label": "Fully Blocked", "bar_top_y": 600, "error_top_y": 439, "error_bottom_y": 761}
+  ]
+}

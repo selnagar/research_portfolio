@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="chicken" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#fff1dc"/><stop offset=".38" stop-color="#f0ba86"/><stop offset=".49" stop-color="#c98c60"/><stop offset=".56" stop-color="#f5cea4"/><stop offset="1" stop-color="#dcab80"/></linearGradient>
+    <linearGradient id="bone" x2="0" y2="1"><stop stop-color="#f7f3e9"/><stop offset="1" stop-color="#c9c6d5"/></linearGradient>
+  </defs>
+  <path d="m103 92 23 14Q134 101 138 108Q142 115 135 117Q139 124 132 127Q125 130 121 121L100 107Z" fill="url(#bone)"/>
+  <path d="M35 50Q53 28 87 35Q118 36 124 68Q132 99 106 118Q88 135 56 122Q24 114 27 83Q22 63 35 50Z" fill="url(#chicken)"/>
+</svg>
