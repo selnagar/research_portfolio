@@ -1,6 +1,6 @@
-/* Feature levels and cell assignments from the supplied reference image.
-   As clarified by the researcher: central orange = Category 1;
-   peripheral blue = Category 2 (overriding the image's category numbers).
+/* 
+   central orange = Category 1;
+   peripheral blue = Category 2.
    Rows run top to bottom and columns left to right. */
 window.EXPERIMENT_DATA = {
   feature1Levels: [1 / 6, 2 / 6, 3 / 6, 4 / 6, 5 / 6, 1],
